@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace SatApp
 {
@@ -23,6 +24,20 @@ namespace SatApp
         public MainWindow()
         {
             InitializeComponent();
+
+            if (Properties.Settings.Default.firstTimeLaunch)
+            {
+                mainFrame.Navigate(new FirstLoginPage());
+            }
+            else
+            {
+                mainFrame.Navigate(new LoginPage());
+            }
+        }
+
+        private void windowMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Keyboard.ClearFocus();
         }
     }
 }

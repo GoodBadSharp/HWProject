@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SatApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="680" MinHeight="350" MinWidth="680"
+        Focusable="True" MouseDown="windowMouseDown">
     <Grid>
-        
+        <Frame x:Name="mainFrame"  Margin="10" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>
