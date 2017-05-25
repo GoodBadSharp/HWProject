@@ -1,0 +1,23 @@
+﻿<Page x:Class="SatApp.ViewDataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SatApp"
+      mc:Ignorable="d" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+      Title="ViewDataPage" >
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+        <ComboBox x:Name="searchCriteriaComboBox" HorizontalAlignment="Right" Height="23" Margin="217,10,0,0" VerticalAlignment="Top" Width="123" IsEnabled="False"/>
+        <ListBox x:Name="listBox" VerticalAlignment="Stretch" Margin="0,38,0,37" DataContext="_satellite" ItemsSource="{Binding}" DisplayMemberPath="SatelliteInfo"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        
+        <Button x:Name="buttonEdit" Content="Изменить" HorizontalAlignment="Left" Margin="40,0,0,6" VerticalAlignment="Bottom" Width="93" Height="26" IsEnabled="False"/>
+        <Button x:Name="buttonDelete" Content="Удалить" HorizontalAlignment="Right" Margin="0,0,40,6" VerticalAlignment="Bottom" Width="93" Height="26" Click="buttonDelete_Click"/>
+        <TextBlock x:Name="searchHint" HorizontalAlignment="Left" Height="23" Margin="4,13,0,0" TextWrapping="Wrap" 
+                   Text="Поиск" TextAlignment="Center" VerticalAlignment="Top" Width="36" Foreground="#FF919191"/>
+        <TextBlock x:Name="listEmptyNotifyBlock" Height="106" Width="Auto" Margin="0,100,0,0"
+            TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Здесь пусто :( &#xa; Вы еще не добавили ни одного элемента" Foreground="#FF323232" />
+        <TextBox x:Name="searchBox" HorizontalAlignment="Stretch" Height="23" Margin="0,10,128,0" TextWrapping="Wrap" VerticalAlignment="Top" GotKeyboardFocus="searchBox_GotKeyboardFocus" LostKeyboardFocus="searchBox_LostKeyboardFocus" Background="{x:Null}" />
+    </Grid>
+</Page>

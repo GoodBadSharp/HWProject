@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SatApp
 {
     /// <summary>
-    /// Логика взаимодействия для HomePage.xaml
+    /// Логика взаимодействия для ManualAddPage.xaml
     /// </summary>
-    public partial class HomePage : Page
+    public partial class ManualAddPage : Window
     {
-        public HomePage()
+        public ManualAddPage()
         {
             InitializeComponent();
         }

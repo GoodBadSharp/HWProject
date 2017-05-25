@@ -4,11 +4,24 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SatApp"
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-      Title="AddEntityPage">
+      mc:Ignorable="d" ScrollViewer.VerticalScrollBarVisibility="Auto"
+      Title="AddEntityPage" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
 
-    <Grid>
-        
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Border BorderBrush="#FF303030" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,10,10" >
+            <TextBlock x:Name="addPageCaption" HorizontalAlignment="Center" Height="24" Margin="0,12,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Добавление новых элементов" VerticalAlignment="Top" Width="178" Foreground="#FF2E2E2E"/>
+        </Border>
+        <Button x:Name="buttonManualAdd" Content="Вручную" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Width="93" Height="26" Click="buttonManualAdd_Click"/>
+        <Button x:Name="buttonAutoAdd" Content="Автоматически" HorizontalAlignment="Center" Margin="0,162,0,0" VerticalAlignment="Top" Width="94" Height="26" IsEnabled="False"/>
+        <Border BorderThickness="1" BorderBrush="#FF7C7C7C" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="70,81,70,0" Height="46">
+            <TextBlock x:Name="manualTextBlock" Margin="-1,5,-1,-1" TextWrapping="Wrap" Text="Выполните ручной ввод данных спутника" 
+                   TextAlignment="Center" Width="189" Foreground="#FF7C7C7C"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="#FF7C7C7C" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,193,0,0" Height="59">
+            <TextBlock x:Name="autoTextBlock" Margin="-1,3,-1,-1" TextWrapping="Wrap" Text="Воспользуйтесь файлом стандартного формата 3LE с данными о спутниках" 
+                   TextAlignment="Center" Width="189" Foreground="#FF7C7C7C"/>
+        </Border>
+        <Button x:Name="buttonCancel" Content="Отмена" HorizontalAlignment="Center" Margin="0,0,0,20" VerticalAlignment="Bottom" Width="94" Height="26" Click="buttonCancel_Click"/>
+
     </Grid>
 </Page>

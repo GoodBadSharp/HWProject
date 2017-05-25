@@ -5,23 +5,17 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SatApp"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-      Title="LoginPage" HorizontalAlignment="Center" VerticalAlignment="Center" PreviewKeyDown="LoginPage_PreviewKeyDown">
+      d:DesignHeight="350" d:DesignWidth="300"
+      Title="LoginPage">
 
-    <Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,99,0,0">
-            <TextBlock x:Name="passwordCaption" TextAlignment="Left" HorizontalAlignment="Center" Height="19" Margin="0,0,80,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="100" Foreground="Black"/>
-            <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" Height="23" Margin="0,24,-1,0" VerticalAlignment="Top" Width="181" Background="White" LostKeyboardFocus="passwordBox_LostKeyboardFocus" GotKeyboardFocus="passwordBox_GotKeyboardFocus"/>
-        </Grid>
-
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,35,0,0">
-            <TextBlock x:Name="loginCaption" TextAlignment="Left" HorizontalAlignment="Center" Margin="0,0,80,0" TextWrapping="Wrap" Text="Логин" Width="100" Foreground="Black" Height="19" VerticalAlignment="Top"/>
-            <TextBox x:Name="loginBox" HorizontalAlignment="Center" Height="23" Margin="0,24,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181" GotKeyboardFocus="loginBox_GotKeyboardFocus" LostKeyboardFocus="loginBox_LostKeyboardFocus" />
-        </Grid>
-
-        <Button x:Name="buttonSignup" Content="Создать" HorizontalAlignment="Center" Margin="0,164,0,0" VerticalAlignment="Top" Width="93" Height="26" Click="buttonSignup_Click"/>
-        <Button x:Name="buttonLogin" Content="Войти" HorizontalAlignment="Center" Margin="0,164,0,0" VerticalAlignment="Top" Width="92" Height="26" Click="buttonLogin_Click"/>
-        <Button x:Name="buttonCancel" Content="Отмена" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Width="92" Height="26" Click="buttonCancel_Click"/>
-        <Button x:Name="buttonGuest" Content="Гостевой режим" HorizontalAlignment="Center" Height="26" Margin="0,202,0,0" VerticalAlignment="Top" Width="112" Click="buttonGuest_Click"/>
+    <Grid Margin="0,10,0,0">
+        <TextBox x:Name="loginBox" HorizontalAlignment="Center" Height="23" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" LostKeyboardFocus="loginBox_LostKeyboardFocus" GotKeyboardFocus="loginBox_GotKeyboardFocus" />
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" Height="23" Margin="0,146,0,0" VerticalAlignment="Top" Width="186" LostKeyboardFocus="passwordBox_LostKeyboardFocus" GotKeyboardFocus="passwordBox_GotKeyboardFocus"/>
+        <TextBlock x:Name="pwBoxCaption" HorizontalAlignment="Left" Height="18" Margin="57,123,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="109"/>
+        <TextBlock x:Name="loginBoxCaption" HorizontalAlignment="Left" Height="18" Margin="57,47,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" Width="109"/>
+        <Button x:Name="buttonSignup" Content="Создать" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="buttonSignup_Click" />
+        <Button x:Name="buttonLogin" Content="Войти" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="buttonLogin_Click" />
+        <Button x:Name="buttonCancel" Content="Отмена" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="buttonCancel_Click"/>
+        <Button x:Name="buttonGuest" Content="Гостевой режим" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" Width="112" Height="26" Click="buttonGuest_Click"/>
     </Grid>
 </Page>

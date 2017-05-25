@@ -10,15 +10,11 @@ namespace SatApp
     static class Pages
     {
 
-        private static HomePage _homePage = new HomePage();
         private static LoginPage _loginPage = new LoginPage();
         private static FirstLoginPage _firstLoginPage = new FirstLoginPage();
         private static AddEntityPage _addEntityPage = new AddEntityPage();
-
-        public static HomePage HomePage
-        {
-            get { return _homePage; }
-        }
+        private static ViewDataPage _viewDataPage = new ViewDataPage();
+        private static AddManuallyPage _addManuallyPage = new AddManuallyPage();
 
         public static LoginPage LoginPage
         {
@@ -30,9 +26,19 @@ namespace SatApp
             get { return _firstLoginPage; }
         }
 
-        public static AddEntityPage EntityPage
+        public static ViewDataPage ViewDataPage
+        {
+            get { return _viewDataPage; }
+        }
+
+        public static AddEntityPage AddEntityPage
         {
             get { return _addEntityPage; }
+        }
+
+        public static AddManuallyPage AddManuallyPage
+        {
+            get { return _addManuallyPage; }
         }
 
     }

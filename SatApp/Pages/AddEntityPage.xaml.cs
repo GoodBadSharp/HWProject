@@ -24,5 +24,15 @@ namespace SatApp
         {
             InitializeComponent();
         }
+
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void buttonManualAdd_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(Pages.AddManuallyPage);
+        }
     }
 }

@@ -1,0 +1,50 @@
+﻿<Page x:Class="SatApp.AddManuallyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SatApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="350"
+      Title="AddManuallyPage" Background="White">
+
+    <Grid>
+        <Border BorderBrush="#FF303030" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,10,10" >
+            <ScrollViewer HorizontalAlignment="Stretch" Margin="0,0,0,0" CanContentScroll="True"
+                      VerticalAlignment="Stretch" VerticalScrollBarVisibility="Visible">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock x:Name="nameBlock" HorizontalAlignment="Left" Height="20" Margin="19,10,0,0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Width="122" Foreground="#FF323232"/>
+                    <TextBlock x:Name="NoradBlcok" HorizontalAlignment="Left" Height="20" Margin="19,35,0,0" TextWrapping="Wrap" Text="NORAD ID" VerticalAlignment="Top" Width="122" Foreground="#FF323232"/>
+                    <TextBlock x:Name="yearBlock" HorizontalAlignment="Left" Height="20" Margin="19,60,0,0" TextWrapping="Wrap" Text="Год запуска" VerticalAlignment="Top" Width="122" Foreground="#FF323232"/>
+                    <TextBlock x:Name="inclinBlock" HorizontalAlignment="Left" Height="20" Margin="19,142,0,0" TextWrapping="Wrap" Text="Наклонение" VerticalAlignment="Top" Width="122" Foreground="#FF323232"/>
+                    <TextBlock x:Name="eccenBlock" HorizontalAlignment="Left" Height="20" Margin="19,167,0,0" TextWrapping="Wrap" Text="Эксцентриситет" VerticalAlignment="Top" Width="122" Foreground="#FF323232"/>
+                    <TextBlock x:Name="raanBlock" HorizontalAlignment="Left" Height="34" Margin="19,192,0,0" TextWrapping="Wrap" Text="Долгота восходящего узла" VerticalAlignment="Top" Width="122" Foreground="#FF323232"/>
+                    <TextBlock x:Name="meanMBlock" HorizontalAlignment="Left" Height="20" Margin="19,231,0,0" TextWrapping="Wrap" Text="Частота обращения" VerticalAlignment="Top" Width="122" Foreground="#FF323232"/>
+                    <TextBlock x:Name="argBlock" HorizontalAlignment="Left" Height="20" Margin="19,256,0,0" TextWrapping="Wrap" Text="Аргумент перицентра" VerticalAlignment="Top" Width="122" Foreground="#FF323232"/>
+                    <TextBox x:Name="line" HorizontalAlignment="Stretch" Height="2" Margin="123,117,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" />
+                    <TextBlock x:Name="caption" HorizontalAlignment="Left" Height="19" Margin="10,108,0,0" TextWrapping="Wrap" Text="Параметры орбиты" VerticalAlignment="Top" Width="108" Foreground="#FF3062B9"/>
+                    <TextBlock x:Name="inclinHint" HorizontalAlignment="Left" Height="20" Margin="148,144,0,0" TextWrapping="Wrap" Text="в градусах" VerticalAlignment="Top" Width="74" Foreground="#FF919191"/>
+                    <TextBlock x:Name="eccenHint" HorizontalAlignment="Left" Height="20" Margin="148,169,0,0" TextWrapping="Wrap" Text="в градусах" VerticalAlignment="Top" Width="74" Foreground="#FF919191"/>
+                    <TextBlock x:Name="raanHint" HorizontalAlignment="Left" Height="20" Margin="148,194,0,0" TextWrapping="Wrap" Text="в градусах" VerticalAlignment="Top" Width="74" Foreground="#FF919191"/>
+                    <TextBlock x:Name="argHint" HorizontalAlignment="Left" Height="20" Margin="148,257,0,0" TextWrapping="Wrap" Text="в градусах" VerticalAlignment="Top" Width="74" Foreground="#FF919191"/>
+                    <TextBlock x:Name="meanMotionHint" HorizontalAlignment="Left" Height="20" Margin="148,232,0,0" TextWrapping="Wrap" Text="ветков в день" VerticalAlignment="Top" Width="87" Foreground="#FF919191"/>
+                    <TextBox x:Name="nameBox" HorizontalAlignment="Stretch" Height="20" Margin="146,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="{x:Null}" />
+                    <TextBox x:Name="idBox" HorizontalAlignment="Stretch" Height="20" Margin="146,35,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="{x:Null}" />
+                    <TextBox x:Name="yearBox" HorizontalAlignment="Stretch" Height="20" Margin="146,60,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="{x:Null}" />
+                    <TextBox x:Name="inclinBox" HorizontalAlignment="Stretch" Height="22" Margin="146,142,10,0" TextWrapping="Wrap" VerticalAlignment="Top" GotKeyboardFocus="inclinBox_GotKeyboardFocus" LostKeyboardFocus="inclinBox_LostKeyboardFocus" Background="{x:Null}" />
+                    <TextBox x:Name="eccenBox" HorizontalAlignment="Stretch" Height="22" Margin="146,167,10,0" TextWrapping="Wrap" VerticalAlignment="Top" GotKeyboardFocus="eccenBox_GotKeyboardFocus" LostKeyboardFocus="eccenBox_LostKeyboardFocus" Background="{x:Null}" />
+                    <TextBox x:Name="raanBox" HorizontalAlignment="Stretch" Height="22" Margin="146,192,10,0" TextWrapping="Wrap" VerticalAlignment="Top" GotKeyboardFocus="raanBox_GotKeyboardFocus" LostKeyboardFocus="raanBox_LostKeyboardFocus" Background="{x:Null}" />
+                    <TextBox x:Name="meanMotionBox" HorizontalAlignment="Stretch" Height="21" Margin="146,231,10,0" TextWrapping="Wrap" VerticalAlignment="Top" GotKeyboardFocus="meanMotionBox_GotKeyboardFocus" LostKeyboardFocus="meanMotionBox_LostKeyboardFocus" Background="{x:Null}" />
+                    <TextBox x:Name="argBox" HorizontalAlignment="Stretch" Height="21" Margin="146,256,10,0" TextWrapping="Wrap" VerticalAlignment="Top" GotKeyboardFocus="argBox_GotKeyboardFocus" LostKeyboardFocus="argBox_LostKeyboardFocus" Background="{x:Null}" />
+                    <Button x:Name="buttonCreate" Content="Добавить" HorizontalAlignment="Left" Margin="34,287,0,0" VerticalAlignment="Top" Width="93" Height="26" Click="buttonCreate_Click"/>
+                    <Button x:Name="buttonCancel" Content="Назад" HorizontalAlignment="Right" Margin="0,287,38,0" VerticalAlignment="Top" Width="93" Height="26" Click="buttonCancel_Click"/>
+
+                    <Border BorderBrush="#FFE00303" BorderThickness="1" HorizontalAlignment="Center" Height="23" Margin="0,85,0,0" VerticalAlignment="Top" Width="175" Visibility="Hidden" >
+                        <TextBlock x:Name="successfulCreate" HorizontalAlignment="Center" TextAlignment="Center" Height="22" Margin="-1,0,-1,-1" TextWrapping="Wrap" Text="Элемент успешно добавлен" VerticalAlignment="Top" Width="175" Foreground="#FFE00303"/>
+                    </Border>
+
+                </Grid>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

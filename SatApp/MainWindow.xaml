@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SatApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="680" MinHeight="350" MinWidth="680"
+        Title="SatApp" Height="400" Width="700" MinHeight="400" MinWidth="700"
         Focusable="True" MouseDown="windowMouseDown">
     <Grid>
-        <Frame x:Name="mainFrame"  Margin="10" NavigationUIVisibility="Hidden" />
+        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="147,10,195,10" />
+        <Button x:Name="buttonBrowse" Content="Просмотр" HorizontalAlignment="Left" Margin="27,29,0,0" VerticalAlignment="Top" Width="93" Height="26" Click="buttonBrowse_Click"/>
+        <Button x:Name="buttonAdd" Content="Добавить &#xa; элемент"  HorizontalAlignment="Left" Margin="27,72,0,0" VerticalAlignment="Top" Width="93" Height="41" IsEnabled="True" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonPreferences" Content="Настройки" HorizontalAlignment="Left" Margin="27,0,0,34" VerticalAlignment="Bottom" Width="93" Height="26" IsEnabled="False"/>
     </Grid>
 </Window>

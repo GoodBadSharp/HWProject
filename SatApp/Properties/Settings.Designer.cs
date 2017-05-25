@@ -25,7 +25,7 @@ namespace SatApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool firstTimeLaunch {
             get {
                 return ((bool)(this["firstTimeLaunch"]));
@@ -56,6 +56,30 @@ namespace SatApp.Properties {
             }
             set {
                 this["adminPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool guestMode {
+            get {
+                return ((bool)(this["guestMode"]));
+            }
+            set {
+                this["guestMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool skipSignupPersist {
+            get {
+                return ((bool)(this["skipSignupPersist"]));
+            }
+            set {
+                this["skipSignupPersist"] = value;
             }
         }
     }
